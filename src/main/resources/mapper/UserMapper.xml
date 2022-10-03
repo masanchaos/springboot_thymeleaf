@@ -1,0 +1,10 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.msh.springboot.mapper.UserMapper">
+    <!--springboot和mybatis在設置aliases有bug-->
+    <select id="listUsers" resultType="com.msh.springboot.bean.User">
+        select * from user
+    </select>
+</mapper>

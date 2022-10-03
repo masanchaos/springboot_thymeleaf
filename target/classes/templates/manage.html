@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>管理後臺</title>
+</head>
+<body bgcolor="#CED3FE">
+<img src="images/1.GIF"/>
+<a href='#' th:href="@{/upload.html}">上傳檔案</a> <a href='#' th:href="@{/}">安全退出</a> 歡迎您:[[${session.loginAdmin.name}]]
+<hr/>
+<div style="text-align: center">
+    <h1>管理僱員~</h1>
+    <table border="1px" cellspacing="0" bordercolor="green" style="width:800px;margin:auto">
+        <tr bgcolor="pink">
+            <td>id</td>
+            <td>name</td>
+            <td>pwd</td>
+            <td>age</td>
+            <td>email</td>
+
+        </tr>
+        <tr bgcolor="#ffc0cb" th:each="user:${users}">
+            <td th:text="${user.id}">a</td>
+            <td th:text="${user.name}">a</td>
+            <td th:text="${user.password}">a</td>
+            <td th:text="${user.age}">a</td>
+            <td th:text="${user.email}">a</td>
+
+        </tr>
+    </table>
+    <br/>
+</div>
+<hr/>
+<!--<img src="images/logo.png"/>-->
+</body>
+</html>

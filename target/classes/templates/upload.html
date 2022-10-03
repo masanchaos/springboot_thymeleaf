@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>upload</title>
+</head>
+<body bgcolor="#CED3FE">
+<img src="images/1.GIF"/>
+<hr/>
+<div style="text-align: center">
+    <h1>上傳檔案</h1>
+    <form action="#" method="post" th:action="@{/upload}" enctype="multipart/form-data">
+        頭像: <input type="file" style="width:150px" name="header"><br/><br/>
+        文件: <input type="file" style="width:150px" name="datas" multiple><br/><br/>
+        <input type="submit" value="上傳"/>
+        <input type="reset" value="重新選擇"/>
+    </form>
+</div>
+<hr/>
+<!--<img src="images/logo.png"/>-->
+</body>
+</html>

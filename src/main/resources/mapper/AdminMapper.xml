@@ -1,0 +1,11 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.msh.springboot.mapper.AdminMapper">
+    <!--springboot和mybatis在設置aliases有bug-->
+    <select id="adminCheck" parameterType="com.msh.springboot.bean.Admin" resultType="com.msh.springboot.bean.Admin">
+        select * from admin where name = #{name} and password = MD5(#{password})
+    </select>
+
+</mapper>
